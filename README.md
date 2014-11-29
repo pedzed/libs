@@ -1,4 +1,6 @@
-libs
-====
+PHP libs
+========
 
-Random PHP libraries.
+A set of PHP libraries containing:
+- number tools
+    - [number formatter](docs/number-tools/number-formatter.md)
