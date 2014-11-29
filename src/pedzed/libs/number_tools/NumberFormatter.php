@@ -15,9 +15,33 @@ namespace pedzed\libs\number_tools {
         protected $_locale = '';
         
         /**
+         * The locales.
+         * 
+         * @var array
+         */
+        protected $_locales = [
+            
+            'en_US' => [
+                'ordinals' => [
+                    '1' => 'st',
+                    '2' => 'nd',
+                    '3' => 'rd',
+                    'default' => 'th'
+                ]
+            ],
+            
+            'nl_NL' => [
+                'ordinals' => [
+                    'default' => 'e'
+                ]
+            ],
+            
+        ];
+        
+        /**
          * Sets the locale.
          * 
-         * @param mixed $nums The numbers.
+         * @param mixed $locale Optional locale.
          */
         public function __construct($locale = 'en_US'){
             $this->_locale = $locale;
@@ -33,25 +57,21 @@ namespace pedzed\libs\number_tools {
             $num = abs($num);
             $lastChar = substr($num, -1, 1);
             
-            switch($lastChar){
-                case 1:
-                    $suffix = ($num == 11) ? 'th' : 'st';
-                break;
-                
-                case 2:
-                    $suffix = ($num == 12) ? 'th' : 'nd';
-                break;
-                
-                case 3:
-                    $suffix = ($num == 13) ? 'th' : 'rd';
-                break;
-                
-                default:
-                    $suffix = 'th';
-                break;
+            if(isset($this->_locales[$this->_locale]['ordinals'])){
+                $ordinals = $this->_locales[$this->_locale]['ordinals'];
             }
             
-            return $num.$suffix;
+            foreach($ordinals as $k => $ordinal){
+                if($num == $k){
+                    $suffix = $ordinal;
+                    break;
+                } else if($lastChar == $k){
+                    $suffix = $ordinal;
+                    break;
+                }
+            }
+            
+            return (isset($suffix)) ? $num.$suffix : $num.$ordinals['default'];
         }
         
         /**
