@@ -45,12 +45,21 @@ namespace pedzed\libs\number_tools {
         ];
         
         /**
+         * The default locale to use.
+         */
+        const DEFAULT_LOCALE = 'en_US';
+        
+        /**
          * Sets the locale.
          * 
          * @param mixed $locale Optional locale.
          */
-        public function __construct($locale = 'en_US'){
-            $this->_locale = $locale;
+        public function __construct($locale = null){
+            if(isset($locale) && isset($this->_locales['locale'])){
+                $this->_locale = $locale;
+            } else {
+                $this->_locale = self::DEFAULT_LOCALE;
+            }
         }
         
         /**
