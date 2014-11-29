@@ -36,6 +36,12 @@ namespace pedzed\libs\number_tools {
                 ]
             ],
             
+            'de_DE' => [
+                'ordinals' => [
+                    'default' => '.'
+                ]
+            ]
+            
         ];
         
         /**
