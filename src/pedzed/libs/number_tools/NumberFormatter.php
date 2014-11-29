@@ -26,6 +26,9 @@ namespace pedzed\libs\number_tools {
                     '1' => 'st',
                     '2' => 'nd',
                     '3' => 'rd',
+                    '11' => 'th',
+                    '12' => 'th',
+                    '13' => 'th',
                     'default' => 'th'
                 ]
             ],
@@ -80,9 +83,15 @@ namespace pedzed\libs\number_tools {
                 if($num == $k){
                     $suffix = $ordinal;
                     break;
-                } else if($lastChar == $k){
-                    $suffix = $ordinal;
-                    break;
+                }
+            }
+            
+            if(!isset($suffix)){
+                foreach($ordinals as $k => $ordinal){
+                    if($lastChar == $k){
+                        $suffix = $ordinal;
+                        break;
+                    }
                 }
             }
             
