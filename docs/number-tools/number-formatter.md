@@ -7,6 +7,12 @@ Number formatter
 ## Requirements
 - PHP 5.4 or greater.
 
+## Installation
+1. [Download all libraries](https://github.com/pedzed/libs/archive/master.zip) 
+   or [specifically download this one](https://raw.githubusercontent.com/pedzed/libs/master/src/pedzed/libs/number_tools/NumberFormatter.php).
+2. Move the file(s) to your server.
+3. Include the file(s). *It's recommended to autoload them.*
+
 ## Usage
 All you have to do is instantiate the class.
 ```php
