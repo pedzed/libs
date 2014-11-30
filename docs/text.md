@@ -2,7 +2,10 @@ Text
 ====
 
 ## Features
+- Uppercase every word's first letter.
 - Limit a string in character length.
+- Static and object calls.
+- Chainable methods.
 
 ## Requirements
 - PHP 5.4 or greater.
@@ -24,8 +27,14 @@ quibusdam deserunt facere placeat quaerat, temporibus molestiae.';
 ### Limit characters
 ```php
 echo pedzed\libs\Text::limitChars($str, 20);
+
+// or
+
+$text = new pedzed\libs\Text($str);
+echo $text->limitChars(20);
+
 /*
-OUTPUT:
+OUTPUT (2x):
 Lorem ipsum dolor si&hellip;
 */
 ```
@@ -34,8 +43,11 @@ Lorem ipsum dolor si&hellip;
 ```php
 echo pedzed\libs\Text::uppercaseWords($str);
 
+// or
+
 $text = new pedzed\libs\Text($str);
 echo $text->uppercaseWords();
+
 /*
 OUTPUT (2x):
 Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Magnam Nulla, Rerum 
@@ -45,7 +57,7 @@ Quibusdam Deserunt Facere Placeat Quaerat, Temporibus Molestiae.
 ```
 
 ### Method chaining
-You can chain methods too.
+You can chain methods as well.
 ```php
 echo pedzed\libs\Text::limitChars($str, 17, '')->uppercaseWords();
 
