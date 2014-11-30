@@ -57,6 +57,11 @@ echo pedzed\libs\Text::lowercase($str);
 echo pedzed\libs\Text::uppercase($str);
 ```
 
+#### First letter
+```php
+echo pedzed\libs\Text::uppercaseFirst($str);
+```
+
 #### Every word's first letter
 ```php
 echo pedzed\libs\Text::uppercaseWords($str);
