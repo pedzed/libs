@@ -45,7 +45,18 @@ Lorem ipsum dolor si&hellip;
 */
 ```
 
+### Lowercasing
+#### Everything
+```php
+echo pedzed\libs\Text::lowercase($str);
+```
+
 ### Uppercasing
+#### Everything
+```php
+echo pedzed\libs\Text::uppercase($str);
+```
+
 #### Every word's first letter
 ```php
 echo pedzed\libs\Text::uppercaseWords($str);
