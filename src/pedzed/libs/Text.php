@@ -77,11 +77,54 @@ namespace pedzed\libs {
         }
         
         /**
-         * Uppercases every word's first character.
+         * Lowercases the string.
          * 
          * @return pedzed\libs\Text Current object for method chaining.
          */
-        protected function _uppercaseWords(){
+        protected function _lowercase($strict = false){
+            $this->_str = strtolower($this->_str);
+            
+            return $this;
+        }
+        
+        /**
+         * Uppercases the string.
+         * 
+         * @return pedzed\libs\Text Current object for method chaining.
+         */
+        protected function _uppercase($strict = false){
+            $this->_str = strtoupper($this->_str);
+            
+            return $this;
+        }
+        
+        /**
+         * Uppercases the first character.
+         * 
+         * @param  bool $strict     Whether to lowercase the rest or not.
+         * @return pedzed\libs\Text Current object for method chaining.
+         */
+        protected function _uppercaseFirst($strict = false){
+            if($strict){
+                $this->_lowercase();
+            }
+            
+            $this->_str = ucfirst($this->_str);
+            
+            return $this;
+        }
+        
+        /**
+         * Uppercases every word's first character.
+         * 
+         * @param  bool $strict     Whether to lowercase the rest or not.
+         * @return pedzed\libs\Text Current object for method chaining.
+         */
+        protected function _uppercaseWords($strict = false){
+            if($strict){
+                $this->_lowercase();
+            }
+            
             $this->_str = ucwords($this->_str);
             
             return $this;

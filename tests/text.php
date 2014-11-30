@@ -23,6 +23,9 @@ echo $text, '<br />';
 echo Text::limitChars('My String', 6), '<br />';
 echo Text::limitChars('abcdefghijklmnopqrstuvwxyz', 3, null), '<br />';
 
+echo Text::uppercaseFirst('lower'), '<br />';
+echo Text::uppercaseFirst('FULLCAPS?', true), '<br />';
+
 try {
     echo (new Text('My String'))->doX(), '<br />';
 } catch(TextException $e){

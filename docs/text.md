@@ -2,8 +2,14 @@ Text
 ====
 
 ## Features
-- Uppercase every word's first letter.
-- Limit a string in character length.
+- Lowercasing
+    - Everything
+- Uppercasing
+    - Everything
+    - First letter
+    - Every word's first letter
+- String limiting
+    - In character length.
 - Static and object calls.
 - Chainable methods.
 
@@ -24,7 +30,8 @@ rerum ut vitae suscipit odit iure voluptas expedita nemo nihil quis et laborum
 quibusdam deserunt facere placeat quaerat, temporibus molestiae.';
 ```
 
-### Limit characters
+### String limiting
+#### In character length
 ```php
 echo pedzed\libs\Text::limitChars($str, 20);
 
@@ -33,13 +40,13 @@ echo pedzed\libs\Text::limitChars($str, 20);
 $text = new pedzed\libs\Text($str);
 echo $text->limitChars(20);
 
-/*
-OUTPUT:
+/* OUTPUT:
 Lorem ipsum dolor si&hellip;
 */
 ```
 
-### Uppercase words
+### Uppercasing
+#### Every word's first letter
 ```php
 echo pedzed\libs\Text::uppercaseWords($str);
 
@@ -48,8 +55,7 @@ echo pedzed\libs\Text::uppercaseWords($str);
 $text = new pedzed\libs\Text($str);
 echo $text->uppercaseWords();
 
-/*
-OUTPUT:
+/* OUTPUT:
 Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Magnam Nulla, Rerum 
 Ut Vitae Suscipit Odit Iure Voluptas Expedita Nemo Nihil Quis Et Laborum 
 Quibusdam Deserunt Facere Placeat Quaerat, Temporibus Molestiae.
@@ -65,8 +71,7 @@ echo pedzed\libs\Text::limitChars($str, 17, '')->uppercaseWords();
 
 $text = new pedzed\libs\Text($str);
 echo $text->limitChars($str, 17, '')->uppercaseWords();
-/*
-OUTPUT:
+/* OUTPUT:
 Lorem Ipsum Dolor
 */
 ```
