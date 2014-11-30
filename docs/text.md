@@ -34,7 +34,7 @@ $text = new pedzed\libs\Text($str);
 echo $text->limitChars(20);
 
 /*
-OUTPUT (2x):
+OUTPUT:
 Lorem ipsum dolor si&hellip;
 */
 ```
@@ -49,7 +49,7 @@ $text = new pedzed\libs\Text($str);
 echo $text->uppercaseWords();
 
 /*
-OUTPUT (2x):
+OUTPUT:
 Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Magnam Nulla, Rerum 
 Ut Vitae Suscipit Odit Iure Voluptas Expedita Nemo Nihil Quis Et Laborum 
 Quibusdam Deserunt Facere Placeat Quaerat, Temporibus Molestiae.
@@ -61,10 +61,12 @@ You can chain methods as well.
 ```php
 echo pedzed\libs\Text::limitChars($str, 17, '')->uppercaseWords();
 
+// or
+
 $text = new pedzed\libs\Text($str);
 echo $text->limitChars($str, 17, '')->uppercaseWords();
 /*
-OUTPUT (2x):
+OUTPUT:
 Lorem Ipsum Dolor
 */
 ```
