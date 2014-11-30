@@ -2,5 +2,4 @@ PHP libs
 ========
 
 A set of PHP libraries containing:
-- number tools
-    - [number formatter](docs/number-tools/number-formatter.md)
+- [NumberFormatter](docs/number-tools/number-formatter.md) - for formatting numbers.

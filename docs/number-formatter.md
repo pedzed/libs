@@ -9,16 +9,16 @@ Number formatter
 
 ## Installation
 1. [Download all libraries](https://github.com/pedzed/libs/archive/master.zip) 
-   or [specifically download this one](https://raw.githubusercontent.com/pedzed/libs/master/src/pedzed/libs/number_tools/NumberFormatter.php).
+   or [specifically download this one](https://raw.githubusercontent.com/pedzed/libs/master/src/pedzed/libs/NumberFormatter.php).
 2. Move the file(s) to your server.
 3. Include the file(s). *It's recommended to autoload them.*
 
 ## Usage
 All you have to do is instantiate the class.
 ```php
-$numFormatter = new pedzed\libs\number_tools\NumberFormatter();
-$numFormatter = new pedzed\libs\number_tools\NumberFormatter('en_US');
-$numFormatter = new pedzed\libs\number_tools\NumberFormatter('nl_NL');
+$numFormatter = new pedzed\libs\NumberFormatter();
+$numFormatter = new pedzed\libs\NumberFormatter('en_US');
+$numFormatter = new pedzed\libs\NumberFormatter('nl_NL');
 ```
 From there, you could make use of the functionalities this class provides.
 

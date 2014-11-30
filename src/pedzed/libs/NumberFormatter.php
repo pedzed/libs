@@ -1,6 +1,6 @@
 <?php
 
-namespace pedzed\libs\number_tools {
+namespace pedzed\libs {
     
     /**
      * Allows you to format numbers in a certain way.

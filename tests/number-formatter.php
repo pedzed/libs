@@ -1,8 +1,8 @@
 <?php
 
-use pedzed\libs\number_tools\NumberFormatter;
+use pedzed\libs\NumberFormatter;
 
-require_once(dirname(dirname(__DIR__)).'/src/pedzed/libs/number_tools/NumberFormatter.php');
+require_once(dirname(__DIR__).'/src/pedzed/libs/NumberFormatter.php');
 
 $numFormatter = new NumberFormatter('en_US');
 
