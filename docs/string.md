@@ -1,5 +1,4 @@
-Text
-====
+# String
 
 ## Features
 - Lowercasing
@@ -18,7 +17,7 @@ Text
 
 ## Installation
 1. [Download all libraries](https://github.com/pedzed/libs/archive/master.zip) 
-   or [specifically download this one](https://raw.githubusercontent.com/pedzed/libs/master/src/pedzed/libs/Text.php).
+   or [specifically download this one](https://raw.githubusercontent.com/pedzed/libs/master/src/pedzed/libs/String.php).
 2. Move the file(s) to your server.
 3. Include the file(s). *It's recommended to autoload them.*
 
@@ -33,12 +32,12 @@ quibusdam deserunt facere placeat quaerat, temporibus molestiae.';
 ### String limiting
 #### In character length
 ```php
-echo pedzed\libs\Text::limitChars($str, 20);
+echo pedzed\libs\String::limitChars($str, 20);
 
 // or
 
-$text = new pedzed\libs\Text($str);
-echo $text->limitChars(20);
+$str = new pedzed\libs\String($str);
+echo $str->limitChars(20);
 
 /* OUTPUT:
 Lorem ipsum dolor si&hellip;
@@ -48,28 +47,28 @@ Lorem ipsum dolor si&hellip;
 ### Lowercasing
 #### Everything
 ```php
-echo pedzed\libs\Text::lowercase($str);
+echo pedzed\libs\String::lowercase($str);
 ```
 
 ### Uppercasing
 #### Everything
 ```php
-echo pedzed\libs\Text::uppercase($str);
+echo pedzed\libs\String::uppercase($str);
 ```
 
 #### First letter
 ```php
-echo pedzed\libs\Text::uppercaseFirst($str);
+echo pedzed\libs\String::uppercaseFirst($str);
 ```
 
 #### Every word's first letter
 ```php
-echo pedzed\libs\Text::uppercaseWords($str);
+echo pedzed\libs\String::uppercaseWords($str);
 
 // or
 
-$text = new pedzed\libs\Text($str);
-echo $text->uppercaseWords();
+$str = new pedzed\libs\String($str);
+echo $str->uppercaseWords();
 
 /* OUTPUT:
 Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Magnam Nulla, Rerum 
@@ -81,12 +80,12 @@ Quibusdam Deserunt Facere Placeat Quaerat, Temporibus Molestiae.
 ### Method chaining
 You can chain methods as well.
 ```php
-echo pedzed\libs\Text::limitChars($str, 17, '')->uppercaseWords();
+echo pedzed\libs\String::limitChars($str, 17, '')->uppercaseWords();
 
 // or
 
-$text = new pedzed\libs\Text($str);
-echo $text->limitChars($str, 17, '')->uppercaseWords();
+$str = new pedzed\libs\String($str);
+echo $str->limitChars($str, 17, '')->uppercaseWords();
 /* OUTPUT:
 Lorem Ipsum Dolor
 */

@@ -4,9 +4,9 @@ namespace pedzed\libs {
     
     use Exception;
     
-    class TextException extends Exception {}
+    class StringException extends Exception {}
     
-    class Text {
+    class String {
         
         /**
          * The string to work with.
@@ -30,7 +30,7 @@ namespace pedzed\libs {
          * @param  string $methodCall The called method.
          * @param  array  $args       The arguments.
          * 
-         * @return pedzed\libs\Text   Current object for method chaining.
+         * @return pedzed\libs\String   Current object for method chaining.
          */
         public function __call($methodCall, $args){
             $method = '_'.$methodCall;
@@ -38,7 +38,7 @@ namespace pedzed\libs {
             if(method_exists($this, $method)){
                 return call_user_func_array([$this, $method], $args);
             } else {
-                throw new TextException('Method '.$methodCall.' does not exist.');
+                throw new StringException('Method '.$methodCall.' does not exist.');
             }
         }
         
@@ -48,7 +48,7 @@ namespace pedzed\libs {
          * @param  string $methodCall The called method.
          * @param  array $args        The arguments.
          * 
-         * @return pedzed\libs\Text   Current object for method chaining.
+         * @return pedzed\libs\String   Current object for method chaining.
          */
         public static function __callStatic($methodCall, $args){
             $method = '_'.$methodCall;
@@ -60,10 +60,10 @@ namespace pedzed\libs {
                     unset($args[0]);
                     return call_user_func_array([$class, $method], $args);
                 } else {
-                    throw new TextException('Method '.$methodCall.' does not exist.');
+                    throw new StringException('Method '.$methodCall.' does not exist.');
                 }
             } else {
-                throw new TextException('At least one argument must be supplied to the first call.');
+                throw new StringException('At least one argument must be supplied to the first call.');
             }
         }
         
@@ -79,7 +79,7 @@ namespace pedzed\libs {
         /**
          * Lowercases the string.
          * 
-         * @return pedzed\libs\Text Current object for method chaining.
+         * @return pedzed\libs\String Current object for method chaining.
          */
         protected function _lowercase($strict = false){
             $this->_str = strtolower($this->_str);
@@ -90,7 +90,7 @@ namespace pedzed\libs {
         /**
          * Uppercases the string.
          * 
-         * @return pedzed\libs\Text Current object for method chaining.
+         * @return pedzed\libs\String Current object for method chaining.
          */
         protected function _uppercase($strict = false){
             $this->_str = strtoupper($this->_str);
@@ -102,7 +102,7 @@ namespace pedzed\libs {
          * Uppercases the first character.
          * 
          * @param  bool $strict     Whether to lowercase the rest or not.
-         * @return pedzed\libs\Text Current object for method chaining.
+         * @return pedzed\libs\String Current object for method chaining.
          */
         protected function _uppercaseFirst($strict = false){
             if($strict){
@@ -118,7 +118,7 @@ namespace pedzed\libs {
          * Uppercases every word's first character.
          * 
          * @param  bool $strict     Whether to lowercase the rest or not.
-         * @return pedzed\libs\Text Current object for method chaining.
+         * @return pedzed\libs\String Current object for method chaining.
          */
         protected function _uppercaseWords($strict = false){
             if($strict){
@@ -136,7 +136,7 @@ namespace pedzed\libs {
          * @param  int    $limit  The character limit.
          * @param  string $ending The end replacement.
          * 
-         * @return pedzed\libs\Text Current object for method chaining.
+         * @return pedzed\libs\String Current object for method chaining.
          */
         protected function _limitChars($limit = 200, $ending = '&hellip;'){
             if(strlen($this->_str) > $limit){
