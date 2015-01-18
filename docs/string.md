@@ -32,11 +32,11 @@ quibusdam deserunt facere placeat quaerat, temporibus molestiae.';
 ### String limiting
 #### In character length
 ```php
-echo pedzed\libs\String::limitChars($str, 20);
+echo String::limitChars($str, 20);
 
 // or
 
-$str = new pedzed\libs\String($str);
+$str = new String($str);
 echo $str->limitChars(20);
 
 /* OUTPUT:
@@ -47,27 +47,27 @@ Lorem ipsum dolor si&hellip;
 ### Lowercasing
 #### Everything
 ```php
-echo pedzed\libs\String::lowercase($str);
+echo String::lowercase($str);
 ```
 
 ### Uppercasing
 #### Everything
 ```php
-echo pedzed\libs\String::uppercase($str);
+echo String::uppercase($str);
 ```
 
 #### First letter
 ```php
-echo pedzed\libs\String::uppercaseFirst($str);
+echo String::uppercaseFirst($str);
 ```
 
 #### Every word's first letter
 ```php
-echo pedzed\libs\String::uppercaseWords($str);
+echo String::uppercaseWords($str);
 
 // or
 
-$str = new pedzed\libs\String($str);
+$str = new String($str);
 echo $str->uppercaseWords();
 
 /* OUTPUT:
@@ -80,11 +80,11 @@ Quibusdam Deserunt Facere Placeat Quaerat, Temporibus Molestiae.
 ### Method chaining
 You can chain methods as well.
 ```php
-echo pedzed\libs\String::limitChars($str, 17, '')->uppercaseWords();
+echo String::limitChars($str, 17, '')->uppercaseWords();
 
 // or
 
-$str = new pedzed\libs\String($str);
+$str = new String($str);
 echo $str->limitChars($str, 17, '')->uppercaseWords();
 /* OUTPUT:
 Lorem Ipsum Dolor
