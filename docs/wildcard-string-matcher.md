@@ -47,3 +47,8 @@ String: lorem.*:
 boolean true
 */
 ```
+Case-sensitivity is supported. On default, it is disabled. To enable 
+case-sensitivity, pass a third parameter.
+```php
+WildcardStringMatcher::match($str1, $str2, true);
+```

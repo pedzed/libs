@@ -20,7 +20,7 @@ namespace pedzed\libs {
          * 
          * @return bool
          */
-        public static function match($str1, $str2){
+        public static function match($str1, $str2, $caseSensitive = false){
             if(self::_hasWildcard($str1) || self::_hasWildcard($str2)){
                 if(self::_hasWildcard($str1)){
                     $wildcardStr = $str1;
@@ -35,6 +35,8 @@ namespace pedzed\libs {
                 $pattern = '#^'.$pattern.'$#';
                 
                 return (preg_match($pattern, $normalStr) == true);
+            } else if(!$caseSensitive){
+                return strtolower($str1) === strtolower($str2);
             } else {
                 return $str1 === $str2;
             }

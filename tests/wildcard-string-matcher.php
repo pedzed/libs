@@ -26,7 +26,7 @@ $strList = [
     'lorem.*'
 ];
 
-$match = 'lorem.ipsum.sit.amet';
+$match = 'lorem.ipsum.SIT.amet';
 
 echo '<h2>'.$match.'</h2>';
 
