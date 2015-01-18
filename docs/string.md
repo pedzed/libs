@@ -86,6 +86,14 @@ echo String::limitChars($str, 17, '')->uppercaseWords();
 
 $str = new String($str);
 echo $str->limitChars($str, 17, '')->uppercaseWords();
+
+// or
+
+$str = new String($str);
+$str->limitChars($str, 17, '');
+$str->uppercaseWords();
+echo $str;
+
 /* OUTPUT:
 Lorem Ipsum Dolor
 */
