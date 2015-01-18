@@ -32,12 +32,12 @@ quibusdam deserunt facere placeat quaerat, temporibus molestiae.';
 ### String limiting
 #### In character length
 ```php
-echo String::limitChars($str, 20);
+$str = new String($str);
+echo $str->limitChars(20);
 
 // or
 
-$str = new String($str);
-echo $str->limitChars(20);
+echo String::limitChars($str, 20);
 
 /* OUTPUT:
 Lorem ipsum dolor si&hellip;
