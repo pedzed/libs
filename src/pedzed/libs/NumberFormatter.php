@@ -2,9 +2,14 @@
 
 namespace pedzed\libs {
     
-    /**
-     * Allows you to format numbers in a certain way.
-     */
+    /*
+    |--------------------------------------------------------------------------
+    | Number formatter
+    |--------------------------------------------------------------------------
+    | 
+    | Allows you to format numbers.
+    | 
+    */
     class NumberFormatter {
         
         /**

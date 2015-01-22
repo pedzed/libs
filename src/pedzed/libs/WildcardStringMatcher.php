@@ -4,10 +4,11 @@ namespace pedzed\libs {
     
     /*
     |--------------------------------------------------------------------------
-    | String matcher
+    | Wildcard string matcher
     |--------------------------------------------------------------------------
     | 
-    | Checks if two strings match each other.
+    | Allows you to match two strings with each other by using optional 
+    | wildcards.
     | 
     */
     class WildcardStringMatcher {

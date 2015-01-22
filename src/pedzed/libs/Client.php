@@ -2,9 +2,14 @@
 
 namespace pedzed\libs {
     
-    /**
-     * Information about the client.
-     */
+    /*
+    |--------------------------------------------------------------------------
+    | Client
+    |--------------------------------------------------------------------------
+    | 
+    | Allows you to retrieve client information.
+    | 
+    */
     class Client {
         
         /**

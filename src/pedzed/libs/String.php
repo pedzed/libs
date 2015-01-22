@@ -6,6 +6,14 @@ namespace pedzed\libs {
     
     class StringException extends Exception {}
     
+    /*
+    |--------------------------------------------------------------------------
+    | String
+    |--------------------------------------------------------------------------
+    | 
+    | Allows you to manipulate strings with a fluent interface.
+    | 
+    */
     class String {
         
         /**
@@ -30,7 +38,7 @@ namespace pedzed\libs {
          * @param  string $methodCall The called method.
          * @param  array  $args       The arguments.
          * 
-         * @return pedzed\libs\String   Current object for method chaining.
+         * @return pedzed\libs\String Current object for method chaining.
          */
         public function __call($methodCall, $args){
             $method = '_'.$methodCall;
@@ -48,7 +56,7 @@ namespace pedzed\libs {
          * @param  string $methodCall The called method.
          * @param  array $args        The arguments.
          * 
-         * @return pedzed\libs\String   Current object for method chaining.
+         * @return pedzed\libs\String Current object for method chaining.
          */
         public static function __callStatic($methodCall, $args){
             $method = '_'.$methodCall;
